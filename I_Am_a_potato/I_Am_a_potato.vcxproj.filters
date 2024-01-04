@@ -30,7 +30,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\Desktop\potato.ico">
+    <Image Include="\potato.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
