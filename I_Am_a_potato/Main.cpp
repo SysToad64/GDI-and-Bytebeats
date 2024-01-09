@@ -12,26 +12,27 @@ typedef struct
     FLOAT s;
     FLOAT l;
 } HSL;
+// Unused in Program 
+// DWORD WINAPI icons(LPVOID lpParams) {
+//     HDC hdc = GetWindowDC(GetDesktopWindow());
+//     int x = GetSystemMetrics(SM_CXSCREEN);
+//     int y = GetSystemMetrics(SM_CYSCREEN);
+//     while (true) {
+//         hdc = GetWindowDC(GetDesktopWindow());
+//         x = GetSystemMetrics(SM_CXSCREEN);
+//         y = GetSystemMetrics(SM_CYSCREEN);
+//         DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_ERROR));
+//         Sleep(10);
+//         DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_WARNING));
+//         Sleep(10);
+//         DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_APPLICATION));
+//         Sleep(10);
+//         DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_SHIELD));
+//         Sleep(10);
+//         ReleaseDC(0, hdc);
+//     }
+// }
 
-DWORD WINAPI icons(LPVOID lpParams) {
-    HDC hdc = GetWindowDC(GetDesktopWindow());
-    int x = GetSystemMetrics(SM_CXSCREEN);
-    int y = GetSystemMetrics(SM_CYSCREEN);
-    while (true) {
-        hdc = GetWindowDC(GetDesktopWindow());
-        x = GetSystemMetrics(SM_CXSCREEN);
-        y = GetSystemMetrics(SM_CYSCREEN);
-        DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_ERROR));
-        Sleep(10);
-        DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_WARNING));
-        Sleep(10);
-        DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_APPLICATION));
-        Sleep(10);
-        DrawIcon(hdc, rand() % x, rand() % y, LoadIcon(0, IDI_SHIELD));
-        Sleep(10);
-        ReleaseDC(0, hdc);
-    }
-}
 #pragma region Sound Functions
 VOID WINAPI sound1() {
     HWAVEOUT hWaveOut = 0;
